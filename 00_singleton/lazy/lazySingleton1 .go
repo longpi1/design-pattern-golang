@@ -20,9 +20,10 @@ var (
 
 //GetInstance 用于获取单例模式对象
 func GetInstance() Singleton {
-	once.Do(func() {
-		instance = &singleton{}
-	})
-
+	if instance == nil {
+		once.Do(func() {
+			instance = &singleton{}
+		})
+	}
 	return instance
 }
