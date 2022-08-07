@@ -1,4 +1,4 @@
-package builder
+package main
 
 // ServiceProfile 服务档案，其中服务ID唯一标识一个服务实例，一种服务类型可以有多个服务实例
 type ServiceProfile struct {
